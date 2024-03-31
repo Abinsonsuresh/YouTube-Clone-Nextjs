@@ -1,4 +1,5 @@
 'use client'
+import MainHome from "@/Pages/Home/MainHome";
 import { getvideosData } from "@/provider/Slice/VideosSlice";
 import { FetchAPIData } from "@/utils/ApiFetch";
 import Image from "next/image";
@@ -10,30 +11,20 @@ export default function Home() {
 
 
   const dispatch = useDispatch()
-  useEffect(()=>{
+  useEffect(() => {
     // setVideos(null)
-    FetchAPIData(`search?part=snippet&q=${category}`).then((data)=> 
-    // setVideos(data?.items),
-    dispatch(getvideosData(data?.items)) 
-    // console.log(data.items)
+    FetchAPIData(`search?part=snippet&q=${category}`).then((data) =>
+      // setVideos(data?.items),
+      dispatch(getvideosData(data?.items))
+      // console.log(data.items)
     )
-    
-  },[category])
 
-  const { data } = useSelector((state) => state.Videos)
-  console.log(data)
+  }, [category])
+
+
   return (
-<div>
-  {
-    data?.map((item,index)=>{
-      return(
-        <div key={index}>
-        <img src={item?.snippet?.thumbnails?.medium?.url} alt="" />
-         <p>{item?.snippet?.title}</p>
-        </div>
-      )
-    })
-  }
-</div>
+    <div>
+      <MainHome/>
+    </div>
   );
 }
