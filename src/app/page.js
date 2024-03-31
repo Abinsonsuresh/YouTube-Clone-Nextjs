@@ -1,26 +1,31 @@
 'use client'
+import { getvideosData } from "@/provider/Slice/VideosSlice";
 import { FetchAPIData } from "@/utils/ApiFetch";
-import { data } from "autoprefixer";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
   const [category, setCategory] = useState("New")
-  const [videos, setVideos] = useState(null)
 
+
+  const dispatch = useDispatch()
   useEffect(()=>{
-    setVideos(null)
+    // setVideos(null)
     FetchAPIData(`search?part=snippet&q=${category}`).then((data)=> 
-    setVideos(data.items)   
+    // setVideos(data?.items),
+    dispatch(getvideosData(data?.items)) 
     // console.log(data.items)
     )
     
   },[category])
-  console.log(videos)
+
+  const { data } = useSelector((state) => state.Videos)
+  console.log(data)
   return (
 <div>
   {
-    videos.map((item,index)=>{
+    data?.map((item,index)=>{
       return(
         <div key={index}>
         <img src={item?.snippet?.thumbnails?.medium?.url} alt="" />
