@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useSelector } from "react-redux"
 
@@ -12,9 +13,10 @@ const VideoCard = () => {
                 data?.map((item, index) => {
                     return (
                         <div className="cursor-pointer" onClick={()=> router.push(`/Video/${item?.id?.videoId}`)} key={index}>
-                            <img src={item?.snippet?.thumbnails?.medium?.url} alt="" />
+                            <Image height={360} width={480} src={item?.snippet?.thumbnails?.high?.url} alt="" />
+                            {/* width: 480, height: 360  */}
                             <p>{item?.snippet?.title}</p>
-                            <p>{item?.id?.videoId}</p>
+                            {/* <p>{item?.id?.videoId}</p> */}
                         </div>
                     )
                 })
