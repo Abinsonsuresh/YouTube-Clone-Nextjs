@@ -22,9 +22,9 @@ export default function Home() {
   {
     videos.map((item,index)=>{
       return(
-        <div>
-        <img src={item.snippet.thumbnails.medium.url} alt="" />
-         <p>{item.snippet.title}</p>
+        <div key={index}>
+        <img src={item?.snippet?.thumbnails?.medium?.url} alt="" />
+         <p>{item?.snippet?.title}</p>
         </div>
       )
     })
