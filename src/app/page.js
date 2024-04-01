@@ -26,11 +26,11 @@ export default function Home() {
     <div>
       <div className="grid grid-cols-10">
 
-        <div className="col-span-2 border hidden md:flex">
+        <div className="col-span-1 w-full  hidden md:flex">
           <Sidebar />
         </div>
 
-        <div className="col-span-8">
+        <div className="col-span-9">
           <MainHome />
 
         </div>
