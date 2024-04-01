@@ -3,7 +3,7 @@ import { FaYoutube } from "react-icons/fa";
 const Navbar = () => {
     return (
         <div>
-            <div className="flex justify-between items-center p-4">
+            <div className="flex gap-2 justify-between items-center p-4">
                 <div>
                     <div className='flex items-center gap-2'>
                     <FaYoutube size={30} color="red" fill="white" />

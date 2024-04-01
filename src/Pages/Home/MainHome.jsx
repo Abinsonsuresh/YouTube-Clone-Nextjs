@@ -6,7 +6,7 @@ const MainHome = () => {
   return (
     <div>
       <Navbar/>
-        <div>
+        <div className='p-4'>
             <h3>YOUTUBE</h3>
         </div>
         <div>
