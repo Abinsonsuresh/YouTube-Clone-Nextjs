@@ -4,6 +4,7 @@ import { IoMdHome } from "react-icons/io";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
+import Image from "next/image";
 const Sidebar = () => {
   const [nav, setNav] = useState(false)
   const showNav = () => {
@@ -38,11 +39,14 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className={nav ? ' flex z-50 relative h-full  min-w-[230px] overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-black min-h-screen overflow-hidden max-w-[500px] ' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-black min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
-        <div className="p-2 flex items-center gap-5">
+      <div className={nav ? ' flex z-50 relative h-full  min-w-[230px] overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-black min-h-screen overflow-hidden max-w-[500px]' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-black min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
+        <div className="p-2 pt-4 flex items-center gap-5">
       <span onClick={showNav} className='top-0 left-0'><IoIosMenu size={25} /></span>
 
-      <span>Youtube</span>
+      <div className='flex items-center gap-2'>
+                    <Image height={30} width={30} src={"https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"} alt="" />
+                        <h1 className='text-xl font-bold font-sans'>Youtube</h1>
+                    </div>
 
         </div>
 
