@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <Navbar/>
+        {/* <Navbar/> */}
         {children}
         </body>
     </html>
