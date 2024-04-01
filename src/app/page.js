@@ -24,8 +24,17 @@ export default function Home() {
 
   return (
     <div>
-      <Sidebar/>
-      <MainHome/>
+      <div className="grid grid-cols-10">
+
+        <div className="col-span-2 border hidden md:flex">
+          <Sidebar />
+        </div>
+
+        <div className="col-span-8">
+          <MainHome />
+
+        </div>
+      </div>
     </div>
   );
 }
