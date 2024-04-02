@@ -1,5 +1,6 @@
 'use client'
 import MainHome from "@/Pages/Home/MainHome";
+import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { getvideosData } from "@/provider/Slice/VideosSlice";
 import { FetchAPIData } from "@/utils/ApiFetch";

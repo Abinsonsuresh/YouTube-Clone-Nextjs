@@ -13,7 +13,7 @@ const Sidebar = () => {
   // #0f0f0f
   return (
     <>
-      <div className={!nav ? 'min-h-screen w-full p-4 flex flex-col items-center max-w-[100px]  border' : 'hidden'}>
+      <div className={!nav ? 'min-h-screen w-full p-4 flex flex-col items-center max-w-[100px]  ' : 'hidden'}>
         <div className='flex flex-col gap-2 w-full '>
 
           <span onClick={showNav} className='text-xs font-medium hover:bg-slate-500 rounded-xl p-2 flex flex-col gap-2 items-center'><IoIosMenu size={25} /></span>
@@ -39,16 +39,16 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className={nav ? 'relative   h-full  min-w-[230px]    bg-black   max-w-[250px]  overflow-y-auto    w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
+      <div className={nav ? 'relative   h-full  min-w-[230px]  max-w-[250px]  overflow-y-auto    w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
         <div className="flex h-screen flex-col">
 
           <div className="p-4 pt-4 flex items-center gap-5">
             <span onClick={showNav} className='top-0 left-0'><IoIosMenu size={25} /></span>
 
-            <div className='flex items-center gap-2'>
+            {/* <div className='flex items-center gap-2'>
               <Image height={30} width={30} src={"https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"} alt="" />
               <h1 className='text-xl font-bold font-sans'>Youtube</h1>
-            </div>
+            </div> */}
 
           </div>
 
