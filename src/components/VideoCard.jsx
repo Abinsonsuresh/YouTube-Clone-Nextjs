@@ -16,7 +16,7 @@ const VideoCard = () => {
                             <div className="relative">
                             <Image className="rounded-lg max-h-[200px] object-cover" height={360} width={480} src={item?.snippet?.thumbnails?.medium?.url} alt="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" />
                             <div className="absolute bg-black p-1 bottom-1 rounded-sm right-1 text-xs">
-                                11:30
+                            {Math.floor(Math.random() * (59 - 10) + 10)} : {Math.floor(Math.random() * (100 - 10) + 10)}
                             </div>
                             </div>
                       
