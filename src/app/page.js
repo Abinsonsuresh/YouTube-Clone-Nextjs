@@ -30,7 +30,7 @@ export default function Home() {
           <Sidebar />
         </div>
 
-        <div className="col-span-9">
+        <div className="col-span-9 overflow-hidden">
           <MainHome />
 
         </div>

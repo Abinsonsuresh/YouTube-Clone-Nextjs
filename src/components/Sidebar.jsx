@@ -39,18 +39,21 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className={nav ? ' flex z-50 relative h-full overflow-hidden min-w-[230px] overflow-y-scroll scroll-smooth flex-col w-full  bg-black min-h-screen  max-w-[500px]' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
-        <div className="p-4 pt-4 flex items-center gap-5">
-      <span onClick={showNav} className='top-0 left-0'><IoIosMenu size={25} /></span>
+      <div className={nav ? 'relative  top-0 left-0 z-50  h-full  min-w-[230px]    bg-black   max-w-[500px]  overflow-hidden flex flex-col overflow-y-scroll  overflow-x-hidden scroll  w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
+        <div className=" h-screen">
 
-      <div className='flex items-center gap-2'>
-                    <Image height={30} width={30} src={"https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"} alt="" />
-                        <h1 className='text-xl font-bold font-sans'>Youtube</h1>
-                    </div>
+          <div className="p-4 pt-4 flex items-center gap-5">
+            <span onClick={showNav} className='top-0 left-0'><IoIosMenu size={25} /></span>
 
-        </div>
+            <div className='flex items-center gap-2'>
+              <Image height={30} width={30} src={"https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"} alt="" />
+              <h1 className='text-xl font-bold font-sans'>Youtube</h1>
+            </div>
 
-        <div className='flex py-4 flex-col gap-2 w-full border-b border-[#585858c5]'>
+          </div>
+
+
+          <div className='flex py-4 flex-col gap-2 w-full border-b border-[#585858c5]'>
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><IoMdHome size={25} /> Home</span>
 
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><SiYoutubeshorts size={25} /> Shorts</span>
@@ -64,6 +67,7 @@ const Sidebar = () => {
 
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><SiYoutubeshorts size={25} /> History</span>
         </div>
+
 
         <div className='flex py-4 flex-col gap-2 w-full border-b border-[#585858c5]'>
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><IoMdHome size={25} /> Trending</span>
@@ -89,7 +93,16 @@ const Sidebar = () => {
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><SiYoutubeshorts size={25} /> Podcasts</span>
 
 
+        </div>  
+
         </div>
+
+
+
+
+     
+
+   
 
       </div>
     </>
