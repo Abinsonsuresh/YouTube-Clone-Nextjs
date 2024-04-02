@@ -69,7 +69,7 @@ const Sidebar = () => {
         </div>
 
 
-        <div className='flex py-4 flex-col gap-2 w-full border-b border-[#585858c5]'>
+        <div className='flex py-4 flex-col gap-2 w-full  border-[#585858c5]'>
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><IoMdHome size={25} /> Trending</span>
 
           <span className='text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center'><SiYoutubeshorts size={25} /> Shopping</span>
