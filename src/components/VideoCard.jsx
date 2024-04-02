@@ -21,12 +21,12 @@ const VideoCard = () => {
                             </div>
                       
                             {/* width: 480, height: 360  */}
-                            <div className="flex gap-4 my-4">
+                            <div className="flex gap-4 my-2">
                             <Image className="rounded-full w-10 h-10" height={10} width={10} src={item?.snippet?.thumbnails?.high?.url} alt="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" />
                                 <div className="flex flex-col">
                             <p>{item?.snippet?.title}</p>
-                            <p className="mt-2 text-gray-500">LunarCodes WebSolutions</p>
-                            <p className="text-gray-500"><span>12M Views</span> . <span>1 year ago</span></p>
+                            <p className="mt-2 text-gray-500">{item?.snippet?.channelTitle}</p>
+                            <p className="text-gray-500"><span>{Math.floor(Math.random() * (100 - 10) + 10)}K views</span> . <span>{Math.floor(Math.random() * (12 - 1) + 1)}months ago</span></p>
 
                                 </div>
                             </div>
