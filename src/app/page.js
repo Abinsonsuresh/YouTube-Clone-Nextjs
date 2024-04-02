@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
 export default function Home() {
-  const [category, setCategory] = useState("Trending")
+  const [category, setCategory] = useState("coding")
 
 
   const dispatch = useDispatch()
@@ -36,14 +36,14 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="flex flex-row">
+      <div className="flex flex-row overflow-hidden">
 
 
           <Sidebar />
 
 
 
-        <div className=" w-full  overflow-hidden">
+        <div className=" w-full">
           <MainHome />
 
         </div>

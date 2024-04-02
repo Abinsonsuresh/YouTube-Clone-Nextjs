@@ -8,7 +8,7 @@ const VideoCard = () => {
 
     const router = useRouter()
     return (
-        <div className="flex gap-2 w-full flex-wrap p-2 justify-center">
+        <div className="flex gap-2 w-full flex-wrap p-2 justify-center h-[90vh]">
             {
                 data?.map((item, index) => {
                     return (

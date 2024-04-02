@@ -39,8 +39,8 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className={nav ? 'relative z-50  h-full  min-w-[230px]    bg-black   max-w-[250px]  overflow-hidden flex flex-col overflow-y-scroll  overflow-x-hidden scroll  w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
-        <div className=" h-screen">
+      <div className={nav ? 'relative   h-full  min-w-[230px]    bg-black   max-w-[250px]  overflow-y-auto    w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
+        <div className="flex h-screen flex-col">
 
           <div className="p-4 pt-4 flex items-center gap-5">
             <span onClick={showNav} className='top-0 left-0'><IoIosMenu size={25} /></span>

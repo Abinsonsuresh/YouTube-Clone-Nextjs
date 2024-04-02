@@ -4,10 +4,10 @@ import React from 'react'
 
 const MainHome = () => {
   return (
-    <div>
+    <div className=''>
       <Navbar/>
        
-        <div>
+        <div className='overflow-y-auto'>
             <VideoCard/>
         </div>
     </div>
