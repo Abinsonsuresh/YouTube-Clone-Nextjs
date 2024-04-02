@@ -16,14 +16,23 @@ const VideoData = ({id}) => {
     }
     console.log(VId)
     const [details, setDetails] = useState(null)
+    const [relatedVideos, setRelatedVideos] = useState(null)
+
     useEffect(()=>{
         FetchAPIData(`videos?part=snippet,statistics&id=${VId}`)
         .then((data) => 
         setDetails(data.items[0])
         )
+
+        FetchAPIData(`search?part=snippet&relatedToVideoId=${VId}&type=video`)
+        .then((data) => 
+        setRelatedVideos(data?.items)
+        )
   
     },[VId])
 console.log("D",details)
+console.log("RDV",relatedVideos)
+
   return (
     <div>
       <Navbar/>
