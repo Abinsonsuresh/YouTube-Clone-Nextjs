@@ -6,9 +6,7 @@ const MainHome = () => {
   return (
     <div>
       <Navbar/>
-        <div className='p-4'>
-            <p>YOUTUBE</p>
-        </div>
+       
         <div>
             <VideoCard/>
         </div>

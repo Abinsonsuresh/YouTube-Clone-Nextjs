@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
 export default function Home() {
-  const [category, setCategory] = useState("New")
+  const [category, setCategory] = useState("Trending")
 
 
   const dispatch = useDispatch()
