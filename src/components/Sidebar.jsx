@@ -6,14 +6,14 @@ import { MdOutlineSubscriptions } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
 import Image from "next/image";
 const Sidebar = () => {
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(true)
   const showNav = () => {
     setNav(!nav)
   }
   // #0f0f0f
   return (
     <>
-      <div className={!nav ? 'min-h-screen w-full p-4 flex flex-col items-center' : 'hidden'}>
+      <div className={!nav ? 'min-h-screen w-full p-4 flex flex-col items-center max-w-[100px]  border' : 'hidden'}>
         <div className='flex flex-col gap-2 w-full '>
 
           <span onClick={showNav} className='text-xs font-medium hover:bg-slate-500 rounded-xl p-2 flex flex-col gap-2 items-center'><IoIosMenu size={25} /></span>
@@ -39,7 +39,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className={nav ? 'relative  top-0 left-0 z-50  h-full  min-w-[230px]    bg-black   max-w-[500px]  overflow-hidden flex flex-col overflow-y-scroll  overflow-x-hidden scroll  w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
+      <div className={nav ? 'relative z-50  h-full  min-w-[230px]    bg-black   max-w-[250px]  overflow-hidden flex flex-col overflow-y-scroll  overflow-x-hidden scroll  w-full  scroll-smooth' : 'hidden  h-full overflow-y-scroll scroll-smooth flex-col w-full p-2 bg-[#0f0f0f] min-h-screen overflow-hidden max-w-[500px] relative top-0'}>
         <div className=" h-screen">
 
           <div className="p-4 pt-4 flex items-center gap-5">

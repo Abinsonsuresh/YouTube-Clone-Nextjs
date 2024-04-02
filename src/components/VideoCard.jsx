@@ -8,12 +8,12 @@ const VideoCard = () => {
 
     const router = useRouter()
     return (
-        <div className="flex gap-2 flex-wrap p-2 justify-center">
+        <div className="flex gap-2 w-full flex-wrap p-2 justify-center">
             {
                 data?.map((item, index) => {
                     return (
-                        <div className="cursor-pointer p-2 max-w-[380px]" onClick={()=> router.push(`/Video/${item?.id?.videoId}`)} key={index}>
-                            <Image className="rounded-lg" height={360} width={480} src={item?.snippet?.thumbnails?.medium?.url} alt="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" />
+                        <div className="cursor-pointer p-2 max-h-[390px] max-w-[390px]" onClick={()=> router.push(`/Video/${item?.id?.videoId}`)} key={index}>
+                            <Image className="rounded-lg max-h-[200px] object-cover" height={360} width={480} src={item?.snippet?.thumbnails?.medium?.url} alt="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" />
                       
                             {/* width: 480, height: 360  */}
                             <div className="flex gap-4 my-4">
