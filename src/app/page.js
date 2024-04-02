@@ -11,15 +11,15 @@ export default function Home() {
 
 
   const dispatch = useDispatch()
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   FetchAPIData(`search?part=snippet&q=${category}`).then((data) =>
+    FetchAPIData(`search?part=snippet&q=${category}`).then((data) =>
 
-  //     dispatch(getvideosData(data?.items))
+      dispatch(getvideosData(data?.items))
 
-  //   )
+    )
 
-  // }, [category])
+  }, [category])
 
 
   return (

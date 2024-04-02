@@ -7,7 +7,7 @@ const MainHome = () => {
     <div>
       <Navbar/>
         <div className='p-4'>
-            <h3>YOUTUBE</h3>
+            <p>YOUTUBE</p>
         </div>
         <div>
             <VideoCard/>
