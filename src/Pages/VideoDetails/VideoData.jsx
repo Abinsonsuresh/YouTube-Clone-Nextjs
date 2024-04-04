@@ -17,6 +17,8 @@ const VideoData = ({ id }) => {
   const [details, setDetails] = useState(null)
   const [relatedVideos, setRelatedVideos] = useState(null)
   const [readMore, setReadMore] = useState(false)
+  // const [desc, setDesc] = useState('')
+
 
 
   useEffect(() => {
@@ -34,7 +36,10 @@ const VideoData = ({ id }) => {
   console.log("D", details)
   console.log("RDV", relatedVideos)
 
-  let desc = !readMore ? details?.snippet?.description?.slice(0, 300) : details?.snippet?.description
+
+  let desc = !readMore ? details?.snippet?.description?.slice(0, 300).split('\n') : details?.snippet?.description.split('\n');
+
+
   return (
     <div>
       <Navbar />
@@ -50,8 +55,14 @@ const VideoData = ({ id }) => {
         <p className='font-bold text-xl'>{details?.snippet?.title}</p>
         <p className='text-xl font-semibold'>{details?.snippet?.channelTitle}</p>
         <div className='bg-[#262626] p-4 rounded-xl'>
-        <p>{desc}</p>
-        <span className={readMore ? 'hidden' : 'cursor-pointer font-bold'} onClick={()=>setReadMore(!readMore)}>Readmore</span>
+          {/* <p>{desc}</p> */}
+          {desc && desc?.map((desc, index) => (
+            <React.Fragment key={index}>
+              {desc}
+              {index < desc?.length - 1 && <br />} {/* Add <br> after each line except the last one */}
+            </React.Fragment>
+          ))}
+          <span className={readMore ? 'hidden' : 'cursor-pointer font-bold'} onClick={() => setReadMore(!readMore)}>Readmore</span>
         </div>
         <p>{details?.statistics?.viewCount}</p>
         <p>{details?.statistics?.likeCount}</p>
