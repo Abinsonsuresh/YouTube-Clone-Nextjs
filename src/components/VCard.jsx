@@ -7,10 +7,10 @@ export const VCard = ({item,  index}) => {
 
     return (
         <div>
-            <div className="cursor-pointer p-2 max-h-[390px] max-w-[390px]" onClick={() => router.push(`/Video/${item?.id?.videoId}`)} key={index}>
+            <div className="cursor-pointer p-2 max-h-[390px] max-w-[390px]" >
                 <div className="relative">
                     <Image className="rounded-lg max-h-[200px] object-cover" height={360} width={480} src={item?.snippet?.thumbnails?.medium?.url} alt="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" />
-                    <div className="absolute bg-black p-1 bottom-1 rounded-sm right-1 font-medium text-xs">
+                    <div className="absolute bg-[#1d1d1d] p-1 bottom-1 rounded-xs right-1 font-semibold rounded-md  text-xs">
                         {Math.floor(Math.random() * (59 - 10) + 10)} : {Math.floor(Math.random() * (59 - 10) + 10)}
                     </div>
                 </div>

@@ -116,7 +116,9 @@ const VideoData = ({ id }) => {
             {
                 relatedVideos?.map((item, index) => {
                     return (
-                      <VCard item = {item} index={index}/>
+                      <div onClick={() => router.push(`/Video/${item?.id?.videoId}`)} key={index}>
+                            <VCard item = {item} index={index}/>
+                        </div>
                     )
                 })
             }
