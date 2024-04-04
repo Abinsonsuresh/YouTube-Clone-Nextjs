@@ -6,6 +6,12 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player';
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineDislike } from "react-icons/ai";
+import { BiSolidDownload } from "react-icons/bi";
+import { PiShareFat } from "react-icons/pi";
+import { IoIosMore } from "react-icons/io";
+
 
 const VideoData = ({ id }) => {
 
@@ -74,13 +80,19 @@ const VideoData = ({ id }) => {
                 </div>
               </div>
 
-              <div>
-                like
+              <div className='flex items-center gap-3'>
+              <div className='py-2 bg-[#252525] text-sm rounded-3xl px-4 font-bold flex items-center cursor-pointer'><span className='border-r px-2 flex items-center gap-2'> <AiOutlineLike size={20}/> {details?.statistics?.likeCount}</span> <span> <AiOutlineDislike className='ml-2' size={20} /> </span></div>
+
+              <div className='py-2 bg-[#252525] text-sm rounded-3xl px-4 font-bold flex items-center'><span className=' px-2 flex items-center gap-2'> <PiShareFat   size={20}/> Share</span></div>
+
+              <div className='py-2 bg-[#252525] text-sm rounded-3xl px-4 font-bold flex items-center'><span className=' px-2 flex items-center gap-2'> <BiSolidDownload  size={20}/> Download</span></div>
+
+              <div className='p-2 bg-[#252525] text-sm rounded-full  font-bold flex items-center'><span className='flex items-center gap-2'> <IoIosMore  size={20}/> </span></div>
               </div>
             </div>
             <div className='bg-[#262626] p-4 rounded-xl'>
               {/* <p>{desc}</p> */}
-              <div className="flex gap-3">
+              <div className="flex gap-3 my-2">
                 <p className='font-semibold text-sm'>{details?.statistics?.viewCount} views</p>
                 <p className='font-semibold text-sm'>Published at {day}</p>
 
