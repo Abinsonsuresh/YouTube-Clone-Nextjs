@@ -64,7 +64,7 @@ const VideoData = ({ id }) => {
 
           <div className='flex flex-col my-4'>
             <p className='font-bold text-xl'>{details?.snippet?.title}</p>
-            <div className="flex flex-col md:flex-row md:justify-between  md:items-center" >
+            <div className="flex flex-col md:flex-row md:justify-between  md:items-center">
 
               <div className='flex flex-col items-start  my-4 md:flex-row md:items-center gap-5'>
                 <div className="flex gap-3 ">
@@ -105,13 +105,7 @@ const VideoData = ({ id }) => {
               ))}
               <span className={readMore ? 'hidden' : 'cursor-pointer font-bold'} onClick={() => setReadMore(!readMore)}>Readmore</span>
             </div>
-            <p>{details?.statistics?.viewCount}</p>
-            <p>{details?.statistics?.likeCount}</p>
-
-
-
-
-
+          
           </div>
         </div>
 
