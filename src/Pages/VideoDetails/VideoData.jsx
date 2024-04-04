@@ -64,10 +64,10 @@ const VideoData = ({ id }) => {
 
           <div className='flex flex-col my-4'>
             <p className='font-bold text-xl'>{details?.snippet?.title}</p>
-            <div className="flex justify-between items-center" >
+            <div className="flex flex-col md:flex-row md:justify-between  md:items-center" >
 
-              <div className='flex flex-col items-start my-4 md:flex-row md:items-center gap-5'>
-                <div className="flex gap-3">
+              <div className='flex flex-col items-start  my-4 md:flex-row md:items-center gap-5'>
+                <div className="flex gap-3 ">
                 <Image className="rounded-full w-10 h-10 object-cover" height={10} width={10} src={'https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png'} alt="" />
                 <div className='flex flex-col'>
                   <p className='text-md  font-semibold'>{details?.snippet?.channelTitle}</p>
@@ -80,7 +80,7 @@ const VideoData = ({ id }) => {
                 </div>
               </div>
 
-              <div className='flex items-center gap-3'>
+              <div className='flex items-center gap-3 overflow-x-scroll md:overflow-hidden scroll-smooth  w-f ull  my-2 md:my-0'>
               <div className='py-2 bg-[#252525] text-sm rounded-3xl px-4 font-bold flex items-center cursor-pointer'><span className='border-r px-2 flex items-center gap-2'> <AiOutlineLike size={20}/> {details?.statistics?.likeCount}</span> <span> <AiOutlineDislike className='ml-2' size={20} /> </span></div>
 
               <div className='py-2 bg-[#252525] text-sm rounded-3xl px-4 font-bold flex items-center'><span className=' px-2 flex items-center gap-2'> <PiShareFat   size={20}/> Share</span></div>
