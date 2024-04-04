@@ -11,6 +11,7 @@ import { AiOutlineDislike } from "react-icons/ai";
 import { BiSolidDownload } from "react-icons/bi";
 import { PiShareFat } from "react-icons/pi";
 import { IoIosMore } from "react-icons/io";
+import { VCard } from '@/components/VCard';
 
 
 const VideoData = ({ id }) => {
@@ -111,7 +112,15 @@ const VideoData = ({ id }) => {
 
 
         <div className=''>
-          sdf
+        <div className=" gap-2 w-full grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  p-2 justify-center h-[90vh]">
+            {
+                relatedVideos?.map((item, index) => {
+                    return (
+                      <VCard item = {item} index={index}/>
+                    )
+                })
+            }
+        </div>
         </div>
 
       </div>
