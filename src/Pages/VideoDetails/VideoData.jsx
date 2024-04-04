@@ -46,7 +46,7 @@ const VideoData = ({ id }) => {
   console.log("RDV", relatedVideos)
 
 
-  let desc = !readMore ? details?.snippet?.description?.slice(0, 300).split('\n') : details?.snippet?.description.split('\n');
+  let desc = !readMore ? details?.snippet?.description?.slice(0, 200).split('\n')  : details?.snippet?.description.split('\n');
 
   let day = dayjs(details?.snippet?.publishedAt?.slice(0, 10)).format('MMMM-DD,YYYY')
   console.log(day)
@@ -112,7 +112,7 @@ const VideoData = ({ id }) => {
 
 
         <div className=''>
-        <div className=" gap-2 w-full grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  p-2 justify-center h-[90vh]">
+        <div className=" gap-2 w-full grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-t border-[#424141]  p-2 justify-center h-[90vh]">
             {
                 relatedVideos?.map((item, index) => {
                     return (
