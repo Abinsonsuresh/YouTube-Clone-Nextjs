@@ -40,7 +40,7 @@ export default function Home() {
       <div className="flex flex-row overflow-hidden">
 
 
-          <Sidebar />
+          <Sidebar setCategory={setCategory}/>
 
 
 
