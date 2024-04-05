@@ -6,10 +6,15 @@ import { MdOutlineSubscriptions } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
 import Image from "next/image";
 import { SData, SDataMainS1, SDataMainS2, SDataMainS3 } from "@/Data/SideBarData";
-const Sidebar = () => {
+const Sidebar = ({setCategory}) => {
   const [nav, setNav] = useState(true)
   const showNav = () => {
     setNav(!nav)
+  }
+
+  const ChangeCategory = (e) => {
+    setCategory(e)
+    console.log(e,"clicked")
   }
   // #0f0f0f
   return (
@@ -51,7 +56,7 @@ const Sidebar = () => {
   
             {SDataMainS1.map((item, index) => (
             <span className="text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center" key={index}>
-              {item.icon} {/* Render the icon component here */}
+              {item.icon}
               <p>{item.name}</p>
             </span>
           ))}
@@ -62,7 +67,7 @@ const Sidebar = () => {
           <div className='flex py-4 flex-col gap-2 w-full border-b border-[#585858c5]'>
           {SDataMainS2.map((item, index) => (
             <span className="text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center" key={index}>
-              {item.icon} {/* Render the icon component here */}
+              {item.icon} 
               <p>{item.name}</p>
             </span>
           ))}
@@ -72,9 +77,11 @@ const Sidebar = () => {
           <div className='flex py-4 flex-col gap-2 w-full  border-[#585858c5]'>
            
           {SDataMainS3.map((item, index) => (
-            <span className="text-sm font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center" key={index}>
-              {item.icon} {/* Render the icon component here */}
-              <p>{item.name}</p>
+            <span onClick={()=>ChangeCategory(item.name)} key={index}>
+              <p  className="text-sm  cursor-pointer font-semibold hover:bg-slate-500 rounded-xl px-4  py-2 flex gap-5 items-center z-50">
+              {item.icon} 
+              {item.name}
+              </p>
             </span>
           ))}
 
