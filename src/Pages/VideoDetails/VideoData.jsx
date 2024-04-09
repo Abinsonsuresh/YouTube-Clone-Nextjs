@@ -39,6 +39,7 @@ const VideoData = ({ id }) => {
     FetchAPIData(`search?part=snippet&relatedToVideoId=${VId}&type=video`)
       .then((data) =>
         setRelatedVideos(data?.items)
+        // console.log(data)
       )
 
   }, [VId])
