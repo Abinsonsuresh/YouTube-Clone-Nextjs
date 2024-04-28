@@ -11,6 +11,7 @@ const Sidebar = ({setCategory}) => {
   const showNav = () => {
     setNav(!nav)
   }
+//Fn to change category 
 
   const ChangeCategory = (e) => {
     setCategory(e)
